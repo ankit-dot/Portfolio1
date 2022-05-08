@@ -1,0 +1,93 @@
+
+@import "../global.scss";
+
+.topbar{
+    background-color: white;
+    width:100vw;
+    height:4.37rem;
+    position:fixed;
+    top:0;
+    z-index: 3;
+    color:#15023a;
+    transition: 1s ease;
+     .wrapper{
+         height: 4.37rem;
+         display:flex;
+         justify-content: space-between;
+        align-items: center;
+        margin: 0 15px ;
+        .left{
+
+            display:flex;
+            align-items: center;
+        .item{
+            display:flex;
+            align-items: center;
+            margin-left: 30px;
+             .icon{
+               margin-right: 5px;
+               font-size: 1rem;
+             }
+             span{
+                font-size: 1rem;
+                font-weight: 500;
+             }
+        }
+        .logo{
+            font-size: 40px;
+            font-weight:700;
+            color:#15023a;
+            text-decoration: none;
+            margin-right: 2.5rem;
+        }
+
+    }
+
+    .right{
+        .hamburger{
+            width:2rem;
+            height:1.55rem;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor:pointer;
+           
+            span{
+                height:3px;
+                width:100%;
+                background-color:black;
+                transform-origin: left;
+                transition: all 2s ease;
+
+            }
+        }
+    }
+
+     }
+   &.active{
+       background-color: #15023a;
+       color:white;
+       .left{
+       .logo{
+           color:white;
+       }}
+       
+    .hamburger{
+        span{
+            &:first-child{
+                background-color: white;
+                transform:rotate(45deg);
+            }
+            &:nth-child(2){
+                opacity:0;
+            }
+            &:last-child{
+                background-color: white;
+               transform:rotate(-45deg);
+            }
+        }
+    }
+
+   }   
+}
+
